@@ -40,11 +40,11 @@ public static class AsteroidsBuilder
             var e = new GameObject("Estrella");
             e.transform.SetParent(estrellas.transform);
             e.transform.position = new Vector3(Random.Range(-9f, 9f), Random.Range(-6f, 6f), 1f);
-            float s = Random.Range(0.6f, 1.1f);
+            float s = Random.Range(2.4f, 4.4f);
             e.transform.localScale = new Vector3(s, s, 1f);
             var sr = e.AddComponent<SpriteRenderer>();
             sr.sprite = rombo;
-            sr.color = new Color(0.6f, 0.9f, 1f, Random.Range(0.35f, 0.8f));
+            sr.color = new Color(1f, 1f, 1f, Random.Range(0.5f, 1f));
             sr.sortingOrder = -10;
         }
 
@@ -57,7 +57,7 @@ public static class AsteroidsBuilder
         nave.transform.localScale = new Vector3(0.8f, 0.9f, 1f);
         var srNave = nave.AddComponent<SpriteRenderer>();
         srNave.sprite = triangulo;
-        srNave.color = new Color(0.2f, 0.95f, 0.75f);
+        srNave.color = new Color(0.95f, 0.2f, 0.2f);
         srNave.sortingOrder = 5;
         var colNave = nave.AddComponent<PolygonCollider2D>();
         colNave.isTrigger = true;
@@ -75,7 +75,7 @@ public static class AsteroidsBuilder
         detalle.transform.localScale = new Vector3(0.45f, 0.45f, 1f);
         var srDet = detalle.AddComponent<SpriteRenderer>();
         srDet.sprite = triangulo;
-        srDet.color = new Color(0.95f, 0.2f, 0.7f);
+        srDet.color = new Color(0.2f, 0.45f, 0.95f);
         srDet.sortingOrder = 6;
 
         // GameManager.
@@ -98,7 +98,7 @@ public static class AsteroidsBuilder
         go.transform.localScale = new Vector3(0.15f, 0.15f, 1f);
         var sr = go.AddComponent<SpriteRenderer>();
         sr.sprite = circulo;
-        sr.color = new Color(0.4f, 1f, 1f);
+        sr.color = new Color(1f, 1f, 0.6f);
         sr.sortingOrder = 4;
         var col = go.AddComponent<CircleCollider2D>();
         col.isTrigger = true;
@@ -119,7 +119,7 @@ public static class AsteroidsBuilder
         go.transform.localScale = Vector3.one;
         var sr = go.AddComponent<SpriteRenderer>();
         sr.sprite = rombo;
-        sr.color = new Color(0.95f, 0.45f, 0.55f);
+        sr.color = new Color(0.6f, 0.6f, 0.65f);
         sr.sortingOrder = 3;
         var col = go.AddComponent<CircleCollider2D>();
         col.isTrigger = true;
