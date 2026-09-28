@@ -29,7 +29,7 @@ public static class AsteroidsBuilder
         cam.orthographic = true;
         cam.orthographicSize = 6;
         cam.clearFlags = CameraClearFlags.SolidColor;
-        cam.backgroundColor = new Color(0.08f, 0.03f, 0.12f);
+        cam.backgroundColor = new Color(0.02f, 0.02f, 0.04f);
         camGO.transform.position = new Vector3(0, 0, -10);
         camGO.tag = "MainCamera";
 
@@ -40,7 +40,7 @@ public static class AsteroidsBuilder
             var e = new GameObject("Estrella");
             e.transform.SetParent(estrellas.transform);
             e.transform.position = new Vector3(Random.Range(-9f, 9f), Random.Range(-6f, 6f), 1f);
-            float s = Random.Range(2.4f, 4.4f);
+            float s = Random.Range(1.2f, 2.2f);
             e.transform.localScale = new Vector3(s, s, 1f);
             var sr = e.AddComponent<SpriteRenderer>();
             sr.sprite = rombo;
